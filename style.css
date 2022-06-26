@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --back-color: #fedc26;
+  --full-name-color: #000;
+  --link-color: #14283e;
+  --link-shadow: #333;
+  --link-background: #fff;
+  --social-media-size: 3rem;
+  --vector-color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.parent {
+  min-height: 100vh;
+  width: 100%;
+  /* background-image: url("https://images.unsplash.com/photo-1609618992238-d58cb5beabd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); */
+  background-color: var(--back-color);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 24px;
+}
+
+.vector {
+  position: absolute;
+  z-index: 1;
+  font-size: 3rem;
+  color: var(--vector-color);
+  filter: drop-shadow(0px 0px 5px #00f);
+}
+
+.profile-image {
+  position: relative;
+  z-index: 2;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-image: url("images/redwan.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.full-name {
+  position: relative;
+  z-index: 3;
+  color: var(--full-name-color);
+  font-size: 3rem;
+  width: fit-content;
+  margin: -10px auto 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.social-media {
+  position: relative;
+  z-index: 4;
+  width: fit-content;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  /* background-color: #fff; */
+}
+.social-media a {
+  transition: 0.3s ease-in-out;
+}
+.social-media a i {
+  font-size: var(--social-media-size);
+}
+.social-media a:nth-of-type(1) i {
+  color: #000000;
+}
+.social-media a:nth-of-type(2) i {
+  color: #fc05ff;
+}
+.social-media a:nth-of-type(3) i {
+  color: #395498;
+}
+.social-media a:nth-of-type(4) i {
+  color: #2dd449;
+}
+
+.social-media a:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.main-nav {
+  position: relative;
+  z-index: 5;
+  max-width: 1000px;
+  margin: 24px auto;
+}
+
+.main-nav li {
+  list-style: none;
+  margin: 24px auto;
+  background-color: var(--link-background);
+  border-radius: 5px;
+  box-shadow: 8px 10px 0px var(--link-shadow);
+  transition: 0.3s ease-in-out;
+}
+.main-nav li:hover {
+  transform: translateY(4px);
+  box-shadow: 4px 5px 0px var(--link-shadow);
+}
+
+.main-nav li a {
+  color: var(--link-color);
+  background-color: var(--link-background);
+  text-align: center;
+  display: block;
+  height: 100%;
+  width: fit-content;
+  font-size: 1.4rem;
+  padding: 12px 32px;
+  border-radius: 5rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin: auto;
+}
